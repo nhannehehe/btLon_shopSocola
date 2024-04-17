@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/timKiem.js"></script>
+    <script>
+        function addToCart() {
+            var productName = "Mild White";
+            var price = 270000;
+            var quantity = document.getElementById("quantity").value;
+        
+            var product = {
+                productName: productName,
+                price: price,
+                quantity: quantity
+            };
+        
+            var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+            cartItems.push(product);
+            localStorage.setItem("cartItems", JSON.stringify(cartItems));
+        
+            window.location.href = "gioHang.html";
+        }
+        </script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #004d40;">
+                <div class="container-fluid w-100">
+                    <a class="navbar-brand" href="home.html">
+                        <img src="../img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                        NHAN SOCOLA
+                    </a>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav w-100 justify-content-between">
+                            <li class="nav-item">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="searchInput" placeholder="Tìm nhanh sản phẩm..."
+                                        aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <button onclick="filterProducts()" class="btn btn-outline-success" id="search-button" type="button">Tìm kiếm</button>
+                                    </div>
+                                    <div class="row mt-3" id="productList">
+                                       
+                                    </div>
+                                    <div id="search-results"></div>
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="login.html" id="navbarDropdownAccountLink"
+                                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Đăng nhập/Đăng ký Tài khoản
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="gioHang.html">Giỏ hàng</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar-nav nav-fill">
+                    <ul class="nav navbar-expand">
+                        <li class="nav-item"><a href="gioiThieu.html" class="nav-link">GIỚI THIỆU</a></li>
+                        <li class="nav-item"><a href="danhSachSanPham.html" class="nav-link">DANH SÁCH SẢN PHẨM</a></li>
+                        <li class="nav-item"><a href="hangBanChay.html" class="nav-link">HÀNG BÁN CHẠY</a></li>
+                        <li class="nav-item"><a href="chamSocKhachHang.html" class="nav-link">CHĂM SÓC KHÁCH HÀNG</a></li>
+                        <li class="nav-item"><a href="siteMap.html" class="nav-link">SITEMAP</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="../img/mild white.png" alt="Mild White" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <h2>Mild White</h2>
+                <ul>
+                    
+                    <li>Giá: 270.000đ</li>
+                    <li>Thương hiệu: Harrys</li>
+                    <li>Kho: Còn hàng</li>
+                </ul>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="quantity">Số lượng:</label>
+                        <input type="number" id="quantity" name="quantity" min="1" value="1" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-primary" onclick="addToCart()">Thêm vào giỏ</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <h5>THÔNG TIN CHUNG</h5>
+                <p>Giới thiệu</p>
+                <p>Liên hệ</p>
+                <p>Thanh toán</p>
+                <p>Chính sách bảo mật</p>
+                <p>Chính sách thanh toán</p>
+            </div>
+            <div class="col-md-4">
+                <h5>VỀ CHÚNG TÔI</h5>
+                <p>Website thương hiệu duy nhất sở hữu phân phối của:</p>
+                <p>Công ty TNHH Đầu Tư Thương Mại Dịch Vụ Trọng Nhân</p>
+                <p>Đ/c: 317 Thống Nhất P.11 Q.Gò Vấp TP.HCM</p>
+                <p>Hotline: 0819088848</p>
+            </div>
+            <div class="col-md-4">
+                <h5>BẢN TIN</h5>
+                <div>Đăng ký để không bỏ lỡ thông tin hoặc chương trình khuyến mãi hấp dẫn</div>
+                <form>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email của bạn">
+                    </div>
+                    <button type="submit" class="btn btn-success">Đăng ký</button>
+                </form>
+                <img src="../img/fb.png" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

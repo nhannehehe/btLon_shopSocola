@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/timKiem.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #004d40;">
+                <div class="container-fluid w-100">
+                    <a class="navbar-brand" href="home.html">
+                        <img src="../img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                        NHAN SOCOLA
+                    </a>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav w-100 justify-content-between">
+                            <li class="nav-item">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="searchInput" placeholder="Tìm nhanh sản phẩm..."
+                                        aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <button onclick="filterProducts()" class="btn btn-outline-success" id="search-button" type="button">Tìm kiếm</button>
+                                    </div>
+                                    <div class="row mt-3" id="productList">
+                                       
+                                    </div>
+                                    <div id="search-results"></div>
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="login.html" id="navbarDropdownAccountLink"
+                                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Đăng nhập/Đăng ký Tài khoản
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="gioHang.html">Giỏ hàng</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar-nav nav-fill">
+                    <ul class="nav navbar-expand">
+                        <li class="nav-item"><a href="gioiThieu.html" class="nav-link">GIỚI THIỆU</a></li>
+                        <li class="nav-item"><a href="danhSachSanPham.html" class="nav-link">DANH SÁCH SẢN PHẨM</a></li>
+                        <li class="nav-item"><a href="hangBanChay.html" class="nav-link">HÀNG BÁN CHẠY</a></li>
+                        <li class="nav-item"><a href="chamSocKhachHang.html" class="nav-link">CHĂM SÓC KHÁCH HÀNG</a>
+                        </li>
+                        <li class="nav-item"><a href="siteMap.html" class="nav-link">SITEMAP</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="row">
+            <h2 class="text-center mb-4">BÁNH MOCHI</h2>
+            <p class="text-center">Trong năm nay, cửa hàng socola tươi TPHCM cung cấp thêm cho thực khách loại bánh
+                gạo Nhật Bản. Loại bánh này cũng được người Nhật Bản làm quà biếu trong những ngày lễ Tết ở Nhật Bản
+                – ý nghĩa của nó chính là mang lại niềm vui và sự may mắn đến cho người được tặng. Người mà bạn thầm
+                thương chắc chắn cũng sẽ nhận thấy tình cảm của bạn.
+            </p>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="../img/mochi1.png" alt="Strawberry Choco Daifuku">
+                        <div class="card-body">
+                            <h5 class="card-title">Strawberry Choco Daifuku</h5>
+                            <p class="card-text">1.140.000₫</p>
+                            <a href="tTinM1.html" class="btn btn-primary">Mua ngay</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="../img/mochi2.png" alt="Matcha Choco Daifuku">
+                        <div class="card-body">
+                            <h5 class="card-title">Matcha Choco Daifuku</h5>
+                            <p class="card-text">940.000₫</p>
+                            <a href="tTinM2.html" class="btn btn-primary">Mua ngay</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="../img/mochi3.png" alt="Melon Choco Daifuku">
+                        <div class="card-body">
+                            <h5 class="card-title">Melon Choco Daifuku</h5>
+                            <p class="card-text">1.000.000₫</p>
+                            <a href="tTinM3.html" class="btn btn-primary">Mua ngay</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="row">
+            <h2 class="text-center mb-4">PRAFEUILLE</h2>
+            <p class="text-center">Prafeuille là một phiên bản nama chocolate dạng miếng với nước sốt (syrup) bên trong
+                – mang lại hương vị tươi mát, thanh mát và hấp dẫn – lạ miệng cho thực khách. Với ý nghĩa ngọt ngào,
+                ngất ngây và tượng trưng cho tình yêu, sản phẩm chắc chắn sẽ rất phù hợp cho những ngày Lễ và Tết.
+            </p>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="../img/Pra1.png" alt="Prafeuille Strawberry">
+                        <div class="card-body">
+                            <h5 class="card-title">Prafeuille Strawberry</h5>
+                            <p class="card-text">940.000₫</p>
+                            <a href="tTinPra1.html" class="btn btn-primary">Mua ngay</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="../img/pra2.png" alt="Prafeuille Berry Cube">
+                        <div class="card-body">
+                            <h5 class="card-title">Prafeuille Berry Cube</h5>
+                            <p class="card-text">640.000₫</p>
+                            <a href="tTinPra2.html" class="btn btn-primary">Mua ngay</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="../img/pra3.png" alt="Prafeuille White Milk">
+                        <div class="card-body">
+                            <h5 class="card-title">Prafeuille White Milk</h5>
+                            <p class="card-text">540.000₫</p>
+                            <a href="tTinPra3.html" class="btn btn-primary">Mua ngay</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="../img/pra4.png" alt="Prafeuille Matcha">
+                        <div class="card-body">
+                            <h5 class="card-title">Prafeuille Matcha</h5>
+                            <p class="card-text">700.000₫</p>
+                            <a href="tTinPra4.html" class="btn btn-primary">Mua ngay</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="row">
+            <h2 class="text-center mb-4">SOCOLA</h2>
+            <div class="col-md-12 col-12">
+                <div class="container mt-3">
+
+                    <div class="row">
+
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img class="card-img-top" src="../img/ghana bitter.png"
+                                    alt="Royce Nama Chocolate Ghana-Bitter">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ghana-Bitter</h5>
+                                    <p class="card-text">240.000₫</p>
+                                    <a href="tTinGhana.html" class="btn btn-primary">Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img class="card-img-top" src="../img/shiroi.png" alt="Shiroi Koibito">
+                                <div class="card-body">
+                                    <h5 class="card-title">Shiroi Koibito</h5>
+                                    <p class="card-text"><s>290.000₫</s> 270.000₫</p>
+                                    <a href="tTinShiroi.html" class="btn btn-primary">Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img class="card-img-top" src="../img/champane.png" alt="Champagne Pierre Mignon">
+                                <div class="card-body">
+                                    <h5 class="card-title">Champagne Pierre Mignon</h5>
+                                    <p class="card-text">320.000₫</p>
+                                    <a href="tTinChampagne.html" class="btn btn-primary">Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img class="card-img-top" src="../img/maccha.png" alt="Maccha">
+                                <div class="card-body">
+                                    <h5 class="card-title">Maccha</h5>
+                                    <p class="card-text"><s>300.000₫</s> 280.000₫</p>
+                                    <a href="tTinMaccha.html" class="btn btn-primary">Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img class="card-img-top" src="../img/mild white.png" alt="Mild White">
+                                <div class="card-body">
+                                    <h5 class="card-title">Mild White</h5>
+                                    <p class="card-text">270.000₫</p>
+                                    <a href="tTinMildWhite.html" class="btn btn-primary">Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img class="card-img-top" src="../img/white.png" alt="White">
+                                <div class="card-body">
+                                    <h5 class="card-title">White</h5>
+                                    <p class="card-text"><s>260.000₫</s> 240.000₫</p>
+
+                                    <a href="tTinWhite.html" class="btn btn-primary">Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img class="card-img-top" src="../img/mild milk.png" alt="Mild Milk">
+                                <div class="card-body">
+                                    <h5 class="card-title">Mild Milk</h5>
+                                    <p class="card-text">260.000₫ - 1.500.000₫</p>
+
+                                    <a href="tTinMildMilk.html" class="btn btn-primary">Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img class="card-img-top" src="../img/bitter.png" alt="Bitter Hennessy">
+                                <div class="card-body">
+                                    <h5 class="card-title">Bitter Hennessy</h5>
+                                    <p class="card-text">440.000₫</p>
+                                    <a href="tTinBitter.html" class="btn btn-primary">Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <h5>THÔNG TIN CHUNG</h5>
+                <p>Giới thiệu</p>
+                <p>Liên hệ</p>
+                <p>Thanh toán</p>
+                <p>Chính sách bảo mật</p>
+                <p>Chính sách thanh toán</p>
+            </div>
+            <div class="col-md-4">
+                <h5>VỀ CHÚNG TÔI</h5>
+                <p>Website thương hiệu duy nhất sở hữu phân phối của:</p>
+                <p>Công ty TNHH Đầu Tư Thương Mại Dịch Vụ Trọng Nhân</p>
+                <p>Đ/c: 317 Thống Nhất P.11 Q.Gò Vấp TP.HCM</p>
+                <p>Hotline: 0819088848</p>
+            </div>
+            <div class="col-md-4">
+                <h5>BẢN TIN</h5>
+                <div>Đăng ký để không bỏ lỡ thông tin hoặc chương trình khuyến mãi hấp dẫn</div>
+                <form>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email của bạn">
+                    </div>
+                    <button type="submit" class="btn btn-success">Đăng ký</button>
+                </form>
+                <img src="../img/fb.png" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
